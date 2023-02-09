@@ -1,7 +1,7 @@
 import { useState, useEffect, PropsWithChildren  } from "react";
 import Image from "next/image";
-import styles from "../styles/egParallax.module.css";
-import StaticallyImportedImage from "../public/img/pexels-pixabay-45911.jpg";
+import styles from "styles/egParallax.module.scss";
+import StaticallyImportedImage from "public/img/pexels-pixabay-45911.jpg";
 
 type OnlyChildProps = {
 	children?: JSX.Element,

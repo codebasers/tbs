@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/bugLinkSmoothScroll.module.css";
+import styles from "styles/bugLinkSmoothScroll.module.scss";
 
 export default function BugScroll() {
 	return (
@@ -27,7 +26,7 @@ export default function BugScroll() {
 				</p>
 				<h3>2. Add ‘!important’ to css</h3>
 				<p>The correct behaviour of NextJS Link can also be forced by adding ‘!important’ to the css directive.</p>
-				<p>In (this example) the file ./global.css </p>
+				<p>In (this example) the file ./global.scss </p>
 				<p className="code">body &#123; scroll-behavior: smooth <span style={{ color: "rgb(50, 150, 255)" }}>!important;</span> &#125;</p>
 			</div>
 
