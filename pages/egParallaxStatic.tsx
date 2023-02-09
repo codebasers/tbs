@@ -3,6 +3,13 @@ import Image from "next/image";
 import styles from "../styles/egParallax.module.css";
 import StaticallyImportedImage from "../public/img/pexels-pixabay-45911.jpg";
 
+
+type OnlyChildProps = {
+	children?: JSX.Element,
+}
+
+
+
 /*  add tp Parallaxer.main: className={styles['showRender']}
     and turn on React Dev Tool 'Highlight updates when components render.'
     to show rerender is on the wrapper, not the image
@@ -34,7 +41,7 @@ const ImgItem = () => {
 
 /*  Isolating the re-rendering activity to hopefully speed things up a little.
  */
-const ImgWrapper = ({ children }) => {
+const ImgWrapper = ({ children}:OnlyChildProps) => {
   const [accelerator, setAccelerator] = useState(0.5);
   const [imgOffset, setImgOffset] = useState(0);
   const handleScroll = () => setImgOffset(window.pageYOffset);
@@ -46,17 +53,17 @@ const ImgWrapper = ({ children }) => {
 
   // You can add the style directly. I have the parallax as a client config so it's easy to have conditions here to include or omit it.
 
-  const attrsFixed = {
+  const attrsFixed:any = {
     ...(accelerator === 0 && {
       style: { position: "fixed", width: "100%", height: "100vh", top: "0" },
     }),
   };
-  const attrsPush = {
+  const attrsPush:any = {
     ...(accelerator === 0 && {
       style: { marginTop: "100vh" }, // push the page content so it sits beow image now that image is removed from flow
     }),
   };
-  const attrsFlow = {
+  const attrsFlow:any = {
     ...(accelerator !== 0 && {
       style: { transform: `translateY(${imgOffset * accelerator}px)` },
     }),
