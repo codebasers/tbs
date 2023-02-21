@@ -22,18 +22,27 @@
   }
   .red-box {
 	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  bottom: 0;
-	  right: 0;
-	  width: 100px;
-	  height: 100px;
-	  margin: auto;
-	  background: red;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  color: #FFF;
-	  font-size: 2rem;;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFF;
+	font-size: 3rem;
+	&::after{
+		content: ':)';
+	}
+	&:hover {
+		cursor: pointer;
+		&::after {
+			content: 'X';
+		}
+	}
 
-  }
+}
