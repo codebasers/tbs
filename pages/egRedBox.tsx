@@ -16,7 +16,7 @@ export default function RedBox() {
 	return (
 		<main className={styles['red-box-main']}>
 			<div className={styles["text-box"]}>
-				<h1>The Amazing Red Box</h1>
+				<h1 onClick={(e) => {toggle()}}>The Amazing Red Box</h1>
 				<div>
 					<p>
 						{boxShown ? "That’s a cool read box." : "You wann see a red box?"}
