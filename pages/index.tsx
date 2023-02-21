@@ -18,6 +18,9 @@ export default function Home() {
         <Link href="/egParallaxSmoother">
           EG | Parallax with next/image. Smoother?
         </Link>
+        <Link href="/egRedBox">
+          EG | Show a Red Box
+        </Link>
       </main>
     </>
   );

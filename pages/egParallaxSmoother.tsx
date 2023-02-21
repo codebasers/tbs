@@ -2,6 +2,7 @@ import { useState, useEffect, PropsWithChildren  } from "react";
 import Image from "next/image";
 import styles from "styles/egParallax.module.scss";
 import StaticallyImportedImage from "public/img/pexels-pixabay-45911.jpg";
+import * as tools from 'tools/utilities'
 
 type OnlyChildProps = {
 	children?: JSX.Element,
@@ -18,7 +19,18 @@ export default function Parallaxer() {
   return (
 	<main>
 		<ImgWrapper>
-			<ImgItem />
+		<>
+			<ImgItem /><div style={{    
+					fontSize: '3rem',
+					color: 'white',
+					margin: '5rem',
+					zIndex: '100',
+					position: 'absolute',
+					bottom: '3rem',
+					textShadow: '0 0 3px black',
+					fontWeight: '800'
+				}}>{tools.genRandom()}</div>
+			</>
 		</ImgWrapper>
 	</main>
   );

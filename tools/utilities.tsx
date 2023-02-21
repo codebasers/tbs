@@ -17,5 +17,14 @@ const throttle = (func: Function, interval = 10) => {
 	};
   };
   
-  export { throttle };
+const genRandom = () => {
+	const min = 1000;
+	const max = 9999;
+	const rand = Math.round(min + Math.random() * (max - min));
+	return rand;
+}
+  export {
+	  throttle,
+	  genRandom,
+	};
   
