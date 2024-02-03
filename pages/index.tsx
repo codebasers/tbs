@@ -5,6 +5,7 @@ export default function Home() {
     <>
       <main className="home">
         <h1>Next.js 13 Experiments</h1>
+        <p>These are all old and basically no longer relevant.</p>
         <p>Click a link below to view that experiment.</p>
         <Link href="/bugLinkSmoothScroll">
           BUG | next/link ignores smooth scroll directive.
